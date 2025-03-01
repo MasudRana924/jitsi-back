@@ -170,7 +170,7 @@ const app = express();
 
 // CORS configuration
 app.use(cors({
-  origin: ['http://localhost:3001', 'http://localhost:3000'], // Allow multiple origins
+  origin: ['https://jitsi-opal.vercel.app','http://localhost:3001', 'http://localhost:3000'], // Allow multiple origins
   methods: ['GET', 'POST'] // Allowed HTTP methods
 }));
 
@@ -213,7 +213,7 @@ const Call = mongoose.model('Call', {
 const server = http.createServer(app);
 const io = socketIo(server, {
   cors: {
-    origin: 'http://localhost:3000', // Allow only localhost:3000
+    origin: 'https://jitsi-opal.vercel.app', // Allow only localhost:3000
     methods: ['GET', 'POST']
   }
 });
